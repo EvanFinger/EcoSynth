@@ -1,1 +1,1 @@
-# BioSynth
+# EcoSynth
