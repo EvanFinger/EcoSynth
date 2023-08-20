@@ -137,6 +137,8 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="master_window.cpp" />
+    <ClCompile Include="state.cpp" />
+    <ClCompile Include="state_mainmenu.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
@@ -144,6 +146,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="master_window.h" />
+    <ClInclude Include="state.h" />
+    <ClInclude Include="state_mainmenu.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

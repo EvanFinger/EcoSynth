@@ -48,6 +48,7 @@ void master_window::update()
 
 void master_window::render()
 {
+
 }
 
 void master_window::run()
@@ -59,7 +60,7 @@ void master_window::run()
     {
         this->check_sfml_events();
 
-        this->update();
+        this->update(); 
 
         this->render();
     }
