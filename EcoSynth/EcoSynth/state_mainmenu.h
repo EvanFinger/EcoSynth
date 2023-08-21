@@ -10,6 +10,10 @@ public:
     // constructor / destructor
     state_mainmenu(stateData* state_data);
     ~state_mainmenu();
+
+    //update
+    void updateInput();
+    void update();
 protected:
 
 private:
