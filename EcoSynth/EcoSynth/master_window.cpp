@@ -5,6 +5,12 @@
 
 
 
+void master_window::init_variables()
+{
+    this->window = nullptr;
+    this->dt = 0.f;
+}
+
 void master_window::init_window()
 {
     this->window = new sf::RenderWindow
@@ -42,8 +48,14 @@ void master_window::handle_sfml_events(sf::Event event)
         this->window->close();
 }
 
+void master_window::updateSFMLevents()
+{
+    this->check_sfml_events();
+}
+
 void master_window::update()
 {
+    this->updateSFMLevents();
 }
 
 void master_window::render()
@@ -58,7 +70,7 @@ void master_window::run()
     // run the program as long as the window is open
     while (this->window->isOpen())
     {
-        this->check_sfml_events();
+        
 
         this->update(); 
 

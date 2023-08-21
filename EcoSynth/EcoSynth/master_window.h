@@ -7,7 +7,12 @@ public:
 
 	sf::RenderWindow* window;
 
+	//delta time tracking
+	sf::Clock dtClock;
+	float dt;
 
+	// initiators
+	void init_variables();
 	void init_window();
 
 	master_window();
@@ -15,6 +20,8 @@ public:
 
 	void check_sfml_events();
 	void handle_sfml_events(sf::Event event);
+
+	void updateSFMLevents();
 	void update();
 	void render();
 
