@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="es_gui.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="master_window.cpp" />
     <ClCompile Include="state.cpp" />
@@ -149,6 +150,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="es_gui.h" />
     <ClInclude Include="master_window.h" />
     <ClInclude Include="state.h" />
     <ClInclude Include="state_mainmenu.h" />
