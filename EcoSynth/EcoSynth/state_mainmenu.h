@@ -14,6 +14,9 @@ public:
     //update
     void updateInput();
     void update();
+
+    //render
+    void render(sf::RenderTarget* target = nullptr);
 protected:
 
 private:

@@ -15,7 +15,7 @@ public:
 	void setObjectID(short unsigned id);
 
 	short unsigned getObjectID();
-	
+
 	virtual void update() = 0;
 	void updateMousePosition();
 
@@ -40,9 +40,9 @@ class Button
 public:
 	Button
 	(
-		sf::RenderWindow* parent_window, 
+		sf::RenderWindow* parent_window,
 		float x_position, float y_position,
-		float x_size, float y_size, 
+		float x_size, float y_size,
 		sf::Font& font, unsigned short font_size,
 		std::string button_text,
 		unsigned short id
@@ -73,7 +73,7 @@ public:
 
 	void setSize
 	(
-		float width, 
+		float width,
 		float height
 	);
 
@@ -92,6 +92,7 @@ protected:
 		sf::Color text_idle, text_hover, text_active;
 	};
 
+	ButtonColors colors;
 };
 
 

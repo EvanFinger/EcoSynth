@@ -20,3 +20,10 @@ void state_mainmenu::update()
 {
 
 }
+
+//rendering
+
+void state_mainmenu::render(sf::RenderTarget* target)
+{
+
+}
