@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "state_mainmenu.h"
+#include "es_gui.h"
 
 state_mainmenu::state_mainmenu(stateData* state_data)
 	: State(state_data)

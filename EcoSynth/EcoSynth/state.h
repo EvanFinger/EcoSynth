@@ -1,6 +1,8 @@
 #ifndef STATE_H
 #define STATE_H
 
+#include "es_gui.h"
+
 class State;
 
 struct stateData

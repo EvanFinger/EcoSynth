@@ -73,9 +73,23 @@ public:
 
 	void setSize
 	(
-		float width,
-		float height
+		float width, float height
 	);
+
+	void setOutlineThickess
+	(
+		unsigned short thickness
+	);
+
+	objectReturnValues getReturnValue();
+
+	sf::RectangleShape* getBoundingRectangle();
+
+	std::string getButtonTextAsString();
+
+	void update();
+
+	void render();
 
 protected:
 	sf::Font& font;

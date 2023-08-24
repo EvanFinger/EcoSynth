@@ -9,6 +9,13 @@ void master_window::init_variables()
 {
     this->window = nullptr;
     this->dt = 0.f;
+
+    if (!this->font.loadFromFile("Fonts/TT Chocolates Trial Light.otf"))
+    {
+        std::cout << "FAILED TO LOAD FONT : simGUI.h" << "\n";
+    }
+
+    
 }
 
 void master_window::init_window()
@@ -19,10 +26,32 @@ void master_window::init_window()
         "My window",
         sf::Style::Titlebar | sf::Style::Close
     );
+
+    //TESTING REMOVE LATER
+    this->test1 = new Button
+    (
+        this->window,
+        100.f, 100.f,
+        100.f, 80.f,
+        this->font, 20, "BOO",
+        23
+    );
+    this->test1->ColorBoundingRectangle
+    (
+        sf::Color(139, 72, 199, 200), sf::Color(95, 49, 135, 255), sf::Color(41, 21, 59, 150),
+        sf::Color(139, 72, 199, 200), sf::Color(95, 49, 135, 255), sf::Color(41, 21, 59, 150)
+    );
+    this->test1->ColorText
+    (
+        sf::Color::White, sf::Color::White, sf::Color::White
+    );
+
+    //END TESTING REMOVE LATER
 }
 
 master_window::master_window()
 {
+    this->init_variables();
     this->init_window();
 }
 
@@ -56,11 +85,20 @@ void master_window::updateSFMLevents()
 void master_window::update()
 {
     this->updateSFMLevents();
+    //TESTING REMOVE LATER
+    this->test1->update();
+    if (this->test1->getReturnValue() == ACTIVE)
+    {
+        std::cout << ".";
+    }
+    //END TESTING
 }
 
 void master_window::render()
 {
-
+    this->window->clear();
+    this->test1->render(); //TESTING REMOVE LATER
+    this->window->display();
 }
 
 void master_window::run()
@@ -70,8 +108,6 @@ void master_window::run()
     // run the program as long as the window is open
     while (this->window->isOpen())
     {
-        
-
         this->update(); 
 
         this->render();
