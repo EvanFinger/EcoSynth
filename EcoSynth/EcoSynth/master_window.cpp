@@ -7,15 +7,16 @@
 
 void master_window::init_variables()
 {
-    this->window = nullptr;
-    this->dt = 0.f;
-
     if (!this->font.loadFromFile("Fonts/TT Chocolates Trial Light.otf"))
     {
         std::cout << "FAILED TO LOAD FONT : simGUI.h" << "\n";
     }
 
-    
+    this->window = nullptr;
+    this->dt = 0.f;
+    this->data.window = this->window;
+    this->data.states = &this->states;
+    this->data.font = this->font;
 }
 
 void master_window::init_window()
@@ -49,6 +50,11 @@ void master_window::init_window()
     //END TESTING REMOVE LATER
 }
 
+void master_window::init_states()
+{
+
+}
+
 master_window::master_window()
 {
     this->init_variables();
@@ -75,6 +81,11 @@ void master_window::handle_sfml_events(sf::Event event)
     // "close requested" event: we close the window
     if (event.type == sf::Event::Closed)
         this->window->close();
+}
+
+void master_window::update_dt()
+{
+    this->states.push(new state_mainmenu(this->data));
 }
 
 void master_window::updateSFMLevents()

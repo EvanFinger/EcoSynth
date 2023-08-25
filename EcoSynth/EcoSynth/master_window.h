@@ -13,12 +13,16 @@ public:
 	sf::Clock dtClock;
 	float dt;
 
-	sf::Font font;
+	stateData data;
+	std::stack<State*> states;
+
+	sf::Font font; // REMOVE LATER
 	Button* test1;
 
 	// initiators
 	void init_variables();
 	void init_window();
+	void init_states();
 
 	master_window();
 	~master_window();
@@ -26,6 +30,7 @@ public:
 	void check_sfml_events();
 	void handle_sfml_events(sf::Event event);
 
+	void update_dt();
 	void updateSFMLevents();
 	void update();
 	void render();

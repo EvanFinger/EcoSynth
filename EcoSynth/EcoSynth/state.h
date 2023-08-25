@@ -11,6 +11,7 @@ struct stateData
 	sf::RenderWindow* window;
 	std::stack<State*>* states;
 	std::map< std::string, sf::Texture > textures;
+	sf::Font& font;
 };
 
 class State
@@ -38,6 +39,7 @@ protected:
 	stateData* data;
 	std::stack<State*>* states;
 	sf::RenderWindow* window;
+	sf::Font& font;
 	bool quit_state;
 
 	//Mouse

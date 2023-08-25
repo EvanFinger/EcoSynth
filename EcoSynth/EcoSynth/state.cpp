@@ -4,6 +4,7 @@
 //construct / destruct
 
 State::State(stateData* state_data)
+	: font(state_data->font)
 {
 	this->data = state_data;
 	this->states = this->data->states;
