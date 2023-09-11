@@ -52,7 +52,7 @@ void master_window::init_window()
 
 void master_window::init_states()
 {
-
+    //this->states.push(new state_mainmenu(this->data));
 }
 
 master_window::master_window()
@@ -85,7 +85,6 @@ void master_window::handle_sfml_events(sf::Event event)
 
 void master_window::update_dt()
 {
-    this->states.push(new state_mainmenu(this->data));
 }
 
 void master_window::updateSFMLevents()

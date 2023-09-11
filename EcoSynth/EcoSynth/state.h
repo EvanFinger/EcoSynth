@@ -7,6 +7,8 @@ class State;
 
 struct stateData
 {
+	stateData();
+	~stateData();
 	//Vars
 	sf::RenderWindow* window;
 	std::stack<State*>* states;
